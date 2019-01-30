@@ -2,7 +2,7 @@ export default {
     computed: {
         filteredQuerys: function(){
             return this.querys.filter(query => {
-                return  query.title.toLowerCase().match(this.search) ||
+                return  query.schema.toLowerCase().match(this.search) ||
                 query.keywords.toLowerCase().match(this.search); 
                 /* 
                 devuelve un nuevo array filtrado

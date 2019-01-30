@@ -8,7 +8,7 @@
       <v-list class="pa-1">
         <v-list-tile>
           <v-list-tile-content>
-            <v-list-tile-title>Menu Loco</v-list-tile-title>
+            <v-list-tile-title>Main Menu</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -30,12 +30,12 @@
         <v-toolbar>
             <v-btn color="teal" dark @click.stop="drawer =!drawer">Menu</v-btn>
             <v-spacer></v-spacer>
-            <v-toolbar-item>
+            <v-toolbar-items>
                 <v-btn flat to="/">
                     <v-icon left large>fingerprint</v-icon>
-                    AppLoca
+                    
                 </v-btn>
-            </v-toolbar-item>
+            </v-toolbar-items>
         </v-toolbar>
         <main>
 

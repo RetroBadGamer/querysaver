@@ -20,21 +20,34 @@
                 <input type="radio" id="Letters" value="Letters" v-model="query.schema">
                 <label for="Caps">Caps</label>
                 <input type="radio" id="Caps" value="Caps" v-model="query.schema">
+                <label for="Market">Market</label>
+                <input type="radio" id="Market" value="Market" v-model="query.schema">
+                <label for="Notify">Notify</label>
+                <input type="radio" id="Notify" value="Notify" v-model="query.schema">
+                <label for="Coll">Coll</label>
+                <input type="radio" id="Coll" value="Coll" v-model="query.schema">
+                <label for="Iflow">Iflow</label>
+                <input type="radio" id="Iflow" value="Iflow" v-model="query.schema">
+                <label for="Global">Global</label>
+                <input type="radio" id="Global" value="Global" v-model="query.schema">
           </div>
-          <p>Project:</p>
+          <!-- <p>Project:</p> -->
           <!-- <input type="text" class="clear" v-model.lazy="query.project"> -->
-          <v-textarea rows="1" v-model.lazy="query.project" auto-grow></v-textarea>
+         <!--  <v-textarea rows="1" v-model.lazy="query.project" auto-grow></v-textarea> -->
 <!--           <label for="Author">Author:</label>
           <select id="Author" v-model="query.author">
               <option for="Author" v-for="author in authors" :key="author.id"> {{ author }}</option>
           </select> -->
-          <p>Keywords:</p>
-          <v-textarea rows="1" v-model.lazy="query.keywords" auto-grow></v-textarea>
+         <!--  <p>Keywords:</p>
+          <v-textarea rows="1" v-model.lazy="query.keywords" auto-grow></v-textarea> -->
           <!-- <input type="text" class="clear" id="sarasa" v-model.lazy="query.keywords"> -->
           <p>Query Content:</p>
           <v-textarea v-model.lazy="query.content" box auto-grow></v-textarea>
           <!-- <textarea v-model.lazy="query.content"></textarea> -->
           <!-- en v-on:click el click es el argumento y postQuery el value -->
+
+          <p> Extra Info: </p>  
+          <v-textarea v-model.lazy="query.info" box auto-grow></v-textarea>
           <v-btn type="submit" v-on:click.prevent="postQuery" class="teal lighten-3">Add Query</v-btn>
           <v-btn class="teal lighten-3" @click="clearForm">Reset</v-btn>
           
@@ -69,6 +82,7 @@ export default {
             project: "",
             keywords: "",
             content: "",
+            info: "",
         },
         submitted: false
     }
